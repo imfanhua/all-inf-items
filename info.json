@@ -1,0 +1,11 @@
+{
+  "name": "all-inf-items",
+  "version": "1.0.0",
+  "title": "All Inf Items",
+  "author": "FanHua",
+  "description": "All of the cheat items!",
+  "factorio_version": "1.1",
+  "dependencies": [
+    "base >= 1.1.50"
+  ]
+}
