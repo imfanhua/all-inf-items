@@ -1,4 +1,8 @@
+local GROUP = "all-inf-items"
+
 local function new_recipe(id, type)
+	data.raw["item"][id].subgroup = GROUP
+
 	local target = data.raw[type][id]
 	target.gui_mode = "all"
 
@@ -12,6 +16,15 @@ local function new_recipe(id, type)
 
 	return recipe
 end
+
+data:extend {
+	{
+		type = "item-subgroup",
+		name = GROUP,
+		group = "production",
+		order = "z",
+	},
+}
 
 data:extend{ new_recipe('electric-energy-interface', 'electric-energy-interface') }
 data:extend{ new_recipe('infinity-chest', 'infinity-container') }
